@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 
 const Selection=(props)=>{
   const {applyColor}=props
-  const [var, func]=useState({background:''});
+  var [component, updateSelectionStyle]=useState({background:''});
   return(
-  <div className="flix-box" onClick={()=>applyColor(func)} style={{var}} >
+  <div className="flix-box" onClick={()=>applyColor(updateSelectionStyle)} style={{background: component.background}} >
     <h2 class="subheading">Selection</h2>
     </div>
-  );
+  )
 }
 export default Selection;
