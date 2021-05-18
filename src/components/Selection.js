@@ -1,13 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-const Selection=(props)=>{
-  let [var, func]=useState({background:''})
-  const {applyColor}=props;
-  return(
-  <div className="fix-box" onClick={()=>applyColor(func)} style={{background: var.background}} >
-    <h2 className="subheading">Selection</h2>
-    </div>
-  );
+
+
+const Selection = (props) => {
+    let [component, updateSelectionStyle] = useState({background:''})
+    const {applyColor} = props;
+    return(
+        <div className="fix-box" onClick={()=>applyColor(updateSelectionStyle)} style={{background: component.background}}>
+            <h2 className="subheadingS" >Selection</h2>
+        </div>
+    );
 }
+
 export default Selection;
 
