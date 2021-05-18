@@ -4,7 +4,7 @@ const Selection=(props)=>{
   const {applyColor}=props
   const [var, func]=useState({background:''});
   return(
-  <div onClick={applyColor(func)} style={var} >
+  <div className="flix-box" onClick={()=>applyColor(func)} style={{var}} >
     <h2 class="subheading">Selection</h2>
     </div>
   );
